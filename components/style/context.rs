@@ -6,6 +6,8 @@
 
 use app_units::Au;
 #[cfg(feature = "servo")]
+use crossbeam_channel::Sender;
+#[cfg(feature = "servo")]
 use crate::animation::Animation;
 use crate::bloom::StyleBloom;
 use crate::data::{EagerPseudoStyles, ElementData};
@@ -39,8 +41,6 @@ use selectors::NthIndexCache;
 use servo_arc::Arc;
 #[cfg(feature = "servo")]
 use servo_atoms::Atom;
-#[cfg(feature = "servo")]
-use servo_channel::Sender;
 use std::fmt;
 use std::ops;
 #[cfg(feature = "servo")]
